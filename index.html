@@ -13,6 +13,9 @@
         </form>
     </div>
     <script>
+        const electron = require('electron');
+        const { ipcRenderer } = electron; //icpRenderer object allows browser window to communicate with nodeJS side of app
+
         document.querySelector('form').addEventListener('submit', () => {
                 event.preventDefault();
                 const file = document.querySelector('input').files[0];
