@@ -1,4 +1,4 @@
 document.querySelector('form').addEventListener('sbmit', () => {
     event.preventDefault();
-    debugger
+    console.log('js runs');
 });

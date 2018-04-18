@@ -9,8 +9,13 @@
                 <lable>Select a video</lable>
                 <input class="btn btn-outline-info" type="file" access="video/*">
             </div>
-            <button class="btn btn-outline-info" type="submit">Get Info></button>
+            <button class="btn btn-outline-info" type="submit">Get Info</button>
         </form>
     </div>
-    <script src="./scripts/scripts.js"></script>
+    <script>
+        document.querySelector('form').addEventListener('submit', () => {
+                event.preventDefault();
+                console.log('js runs');
+            });
+    </script>
 </body>
