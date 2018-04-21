@@ -5,11 +5,15 @@
     <div class="container">
         <h1>Video Info</h1>
         <form>
-            <div>
-                <lable>Select a video</lable>
-                <input class="btn btn-outline-info" type="file" access="video/*">
+            <div class="form-group">
+                <lable for="get-video">Select a video</lable>
+                <input class="btn" 
+                       id="get-video"
+                       type="file"
+                       access="video/*">
             </div>
-            <button class="btn btn-outline-info" type="submit">Get Info</button>
+            <button class="btn btn-outline-info" 
+                    type="submit">Get Info</button>
         </form>
 
         <h2 id="result"></h2>
