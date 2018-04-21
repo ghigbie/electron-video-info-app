@@ -15,6 +15,7 @@ app.on('ready', () => {
                 console.log('There was an Error: ', err)
             }else{
                 console.log('Video duration is:', metadata.format.duration);
+                mainWindow.webContents.send('video:metadata', metadata.format.duration);
             }
         });
     });

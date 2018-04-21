@@ -11,6 +11,8 @@
             </div>
             <button class="btn btn-outline-info" type="submit">Get Info</button>
         </form>
+
+        <h2 id="result"></h2>
     </div>
     <script>
         const electron = require('electron');
@@ -22,6 +24,11 @@
 
 
                 ipcRenderer.send('video:submit', path); //this sends path to electron app
+            });
+        
+            ipcRenderer.on('video:metadata', (event, duration) => {
+                const result = `Video Duration: ${duration}`;
+                document.getElementById('result').innerHTML(result);
             });
     </script>
 </body>
