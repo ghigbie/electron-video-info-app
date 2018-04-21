@@ -27,8 +27,8 @@
             });
         
             ipcRenderer.on('video:metadata', (event, duration) => {
-                const result = `Video Duration: ${duration}`;
-                document.getElementById('result').innerHTML(result);
+                const result = `Video Duration: ${duration} seconds`;
+                document.getElementById('result').innerHTML = result
             });
     </script>
 </body>
