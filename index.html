@@ -18,8 +18,10 @@
 
         document.querySelector('form').addEventListener('submit', () => {
                 event.preventDefault();
-                const file = document.querySelector('input').files[0];
-                console.log('js runs');
+                const { path } = document.querySelector('input').files[0];
+
+
+                ipcRenderer.send('video:submit', path); //this sends path to electron app
             });
     </script>
 </body>
